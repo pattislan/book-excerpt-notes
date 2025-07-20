@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "yes | pnpm install && vite",
-    "build": "yes | pnpm install && rm -rf node_modules/.vite-temp && tsc -b && vite build",
-    "lint": "yes | pnpm install && eslint .",
-    "preview": "yes | pnpm install && vite preview",
+    "dev": "pnpm install && vite",
+    "build": "pnpm install && rimraf node_modules/.vite-temp && tsc -b && vite build",
+    "lint": "pnpm install && eslint .",
+    "preview": "pnpm install && vite preview",
     "deploy": "pnpm run build && gh-pages -d dist"
   },
   "dependencies": {
@@ -71,8 +71,10 @@
     "eslint": "^9.15.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
+    "gh-pages": "^6.3.0",
     "globals": "^15.12.0",
     "postcss": "8.4.49",
+    "rimraf": "^6.0.1",
     "tailwindcss": "v3.4.16",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.15.0",
